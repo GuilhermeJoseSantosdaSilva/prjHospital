@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Hospital {
 
+    private String nome;
     private String endereco;
     private int IdHospital;
     private ArrayList<Funcionario> funcionarios = new ArrayList<>();
@@ -30,19 +31,28 @@ public class Hospital {
 
     public void listarTodosFuncionarios() {
         for (int i = 0; i < funcionarios.size(); i++) {
-            System.out.println(funcionarios.get(i));
+            System.out.println(funcionarios.get(i).getNome());
         }
     }
 
-    public Hospital(int id, String endereco) {
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Hospital(int id, String endereco, String nome) {
         this.IdHospital = id;
         this.endereco = endereco;
+        this.nome = nome;
     }
 
     public void listarTodosMedicos() {
         for (int i = 0; i < funcionarios.size(); i++) {
             if (funcionarios.get(i).gerarBonus() == funcionarios.get(i).CalcSalario() * 0.3) {
-                System.out.println(funcionarios.get(i));
+                System.out.println(funcionarios.get(i).getNome());
             }
         }
     }
@@ -50,7 +60,7 @@ public class Hospital {
     public void listarTodosEnfermeiros() {
         for (int i = 0; i < funcionarios.size(); i++) {
             if (funcionarios.get(i).gerarBonus() == funcionarios.get(i).CalcSalario() * 0.2) {
-                System.out.println(funcionarios.get(i));
+                System.out.println(funcionarios.get(i).getNome());
             }
         }
     }
