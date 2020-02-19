@@ -1,7 +1,7 @@
-
 package prjhospital;
 
 public abstract class Pessoa {
+
     private String nome;
     private String rg;
     private String cpf;

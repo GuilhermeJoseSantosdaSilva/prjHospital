@@ -1,8 +1,7 @@
-
 package prjhospital;
 
+public class Enfermeiro extends Funcionario {
 
-public class Enfermeiro extends Funcionario{
     private String COREM;
 
     public String getCOREM() {
@@ -12,7 +11,8 @@ public class Enfermeiro extends Funcionario{
     public void setCOREM(String COREM) {
         this.COREM = COREM;
     }
-    public void setFuncionario(String COREM, String nome, String rg, String cpf, int idade, int matricula, String senha){
+
+    public void setFuncionario(String COREM, String nome, String rg, String cpf, int idade, int matricula, String senha) {
         this.setCOREM(COREM);
         this.setMatricula(matricula);
         this.setSenha(senha);
@@ -21,9 +21,9 @@ public class Enfermeiro extends Funcionario{
         this.setIdade(idade);
         this.setRg(rg);
     }
-    
+
     @Override
-    public double gerarBonus(){
-    return CalcSalario() * 0.2;
+    public double gerarBonus() {
+        return CalcSalario() * 0.2;
     }
 }

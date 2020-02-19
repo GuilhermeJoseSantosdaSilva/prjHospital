@@ -1,7 +1,7 @@
-
 package prjhospital;
 
-public class Paciente extends Pessoa{
+public class Paciente extends Pessoa {
+
     private int codPaciente;
     private String senha;
 
@@ -20,12 +20,13 @@ public class Paciente extends Pessoa{
     public void setSenha(String senha) {
         this.senha = senha;
     }
-    public Paciente(int codPaciente, String senha, String nome, String rg, String cpf, int idade){
+
+    public Paciente(int codPaciente, String senha, String nome, String rg, String cpf, int idade) {
         this.setCodPaciente(codPaciente);
         this.setSenha(senha);
         this.setNome(nome);
         this.setCpf(cpf);
         this.setIdade(idade);
         this.setRg(rg);
-    }    
+    }
 }

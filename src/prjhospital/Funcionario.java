@@ -1,7 +1,7 @@
-
 package prjhospital;
 
 public class Funcionario extends Pessoa {
+
     private int Matricula;
     private String Senha;
     private double valorHora;
@@ -29,7 +29,8 @@ public class Funcionario extends Pessoa {
     public void setSenha(String Senha) {
         this.Senha = Senha;
     }
-    public void setFuncionario(String nome, String rg, String cpf, int idade, int matricula, String senha){
+
+    public void setFuncionario(String nome, String rg, String cpf, int idade, int matricula, String senha) {
         this.Matricula = matricula;
         this.Senha = senha;
         this.setNome(nome);
@@ -37,16 +38,16 @@ public class Funcionario extends Pessoa {
         this.setIdade(idade);
         this.setRg(rg);
     }
-    
-    public double CalcSalario(){
-    return valorHora * 30;
+
+    public double CalcSalario() {
+        return valorHora * 30;
     }
-    
-    public double CalcSalario(double descontos){
+
+    public double CalcSalario(double descontos) {
         return (valorHora * 30) - descontos;
     }
-    
-    public double gerarBonus(){
-    return CalcSalario() * 0.1;
+
+    public double gerarBonus() {
+        return CalcSalario() * 0.1;
     }
 }

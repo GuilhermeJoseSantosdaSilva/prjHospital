@@ -1,6 +1,7 @@
 package prjhospital;
 
-public class Medico extends Funcionario{
+public class Medico extends Funcionario {
+
     private String CRM;
     private String Especialidade;
 
@@ -19,13 +20,14 @@ public class Medico extends Funcionario{
     public void setEspecialidade(String Especialidade) {
         this.Especialidade = Especialidade;
     }
-    public void setFuncionario(String CRM, String Especialidade){
-    this.setCRM(CRM);
-    this.setEspecialidade(Especialidade);
+
+    public void setFuncionario(String CRM, String Especialidade) {
+        this.setCRM(CRM);
+        this.setEspecialidade(Especialidade);
     }
-    
+
     @Override
-    public double gerarBonus(){
-    return CalcSalario() * 0.3;
+    public double gerarBonus() {
+        return CalcSalario() * 0.3;
     }
 }
