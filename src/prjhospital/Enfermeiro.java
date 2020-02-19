@@ -21,4 +21,9 @@ public class Enfermeiro extends Funcionario{
         this.setIdade(idade);
         this.setRg(rg);
     }
+    
+    @Override
+    public double gerarBonus(){
+    return CalcSalario() * 0.2;
+    }
 }

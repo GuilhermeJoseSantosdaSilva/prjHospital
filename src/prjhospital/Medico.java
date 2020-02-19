@@ -23,4 +23,9 @@ public class Medico extends Funcionario{
     this.setCRM(CRM);
     this.setEspecialidade(Especialidade);
     }
+    
+    @Override
+    public double gerarBonus(){
+    return CalcSalario() * 0.3;
+    }
 }
