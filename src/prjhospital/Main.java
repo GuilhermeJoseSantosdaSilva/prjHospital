@@ -1,8 +1,18 @@
 package prjhospital;
 
+import java.sql.Connection;
+import javax.swing.JOptionPane;
+import model.ConnectionFactory;
+import model.Enfermeiro;
+import model.Funcionario;
+import model.Hospital;
+import model.Medico;
+import model.Paciente;
+import model.ProntoSocorro;
+
 /**
  *
- * @author Aluno01
+ * @author Guilherme José
  */
 public class Main {
 
@@ -11,7 +21,7 @@ public class Main {
      */
     public static void main(String[] args) {
         
-        Funcionario a = new Funcionario();
+       /* Funcionario a = new Funcionario();
         a.setFuncionario("Rodolfo", "123", "321", 24, 1, "adoadoadoquemlerasenha");
         a.setValorHora(16.5);
         System.out.println(a.CalcSalario());
@@ -89,7 +99,15 @@ public class Main {
         ProntoSocorro f = new ProntoSocorro(e, 4, "Endereço do Hospital");
         System.out.println(f.getEndereco());
         System.out.println(f.getIdFilial());
-        System.out.println(f.getMatriz().getNome());
+        System.out.println(f.getMatriz().getNome()); */
+        
+        try{
+            Connection con = new ConnectionFactory().getConnection();
+            JOptionPane.showMessageDialog(null, "Conectado Ao Banco!");
+            con.close();
+        } catch(Exception e){
+            JOptionPane.showConfirmDialog(null, e);
+        }
     }
 
 }

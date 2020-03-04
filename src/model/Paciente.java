@@ -1,4 +1,6 @@
-package prjhospital;
+package model;
+
+import model.Pessoa;
 
 public class Paciente extends Pessoa {
 
