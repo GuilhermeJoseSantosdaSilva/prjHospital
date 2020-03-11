@@ -23,12 +23,7 @@ public class Paciente extends Pessoa {
         this.senha = senha;
     }
 
-    public Paciente(int codPaciente, String senha, String nome, String rg, String cpf, int idade) {
-        this.setCodPaciente(codPaciente);
-        this.setSenha(senha);
+    public Paciente(String nome) {
         this.setNome(nome);
-        this.setCpf(cpf);
-        this.setIdade(idade);
-        this.setRg(rg);
     }
 }

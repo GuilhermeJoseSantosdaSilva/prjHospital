@@ -43,9 +43,7 @@ public class Hospital {
         this.nome = nome;
     }
 
-    public Hospital(int id, String endereco, String nome) {
-        this.IdHospital = id;
-        this.endereco = endereco;
+    public Hospital(String nome) {
         this.nome = nome;
     }
 
@@ -64,4 +62,11 @@ public class Hospital {
             }
         }
     }
+
+    @Override
+    public String toString() {
+        return this.getNome();
+    }
+    
+    
 }

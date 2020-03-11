@@ -9,6 +9,8 @@ import model.Hospital;
 import model.Medico;
 import model.Paciente;
 import model.ProntoSocorro;
+import view.CadHospital;
+import view.TelaPrincipal;
 
 /**
  *
@@ -101,13 +103,19 @@ public class Main {
         System.out.println(f.getIdFilial());
         System.out.println(f.getMatriz().getNome()); */
         
-        try{
+       /* try{
             Connection con = new ConnectionFactory().getConnection();
             JOptionPane.showMessageDialog(null, "Conectado Ao Banco!");
             con.close();
         } catch(Exception e){
             JOptionPane.showConfirmDialog(null, e);
-        }
+        }*/
+        
+        /*CadHospital cadh = new CadHospital();
+        cadh.setVisible(true);*/
+        
+        TelaPrincipal tp = new TelaPrincipal();
+        tp.setVisible(true);
     }
 
 }
